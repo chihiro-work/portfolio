@@ -1,0 +1,15 @@
+/*-------------
+ラベル
+-------------*/
+/* 必須ラベル */
+.required-label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #0C449B;
+    border-radius: 10px;
+    color: $font-white;
+    font-size: 14px;
+    text-align: center;
+}

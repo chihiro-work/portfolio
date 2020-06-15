@@ -1,0 +1,18 @@
+/*-------------
+共通コンテナ
+-------------*/
+.common-container {
+    padding: 80px 0 87px;
+    text-align: center;
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        color: $en-head-text;
+        font-size: 16px;
+        line-height: 27px;
+        margin-bottom: 73px;
+    }
+}

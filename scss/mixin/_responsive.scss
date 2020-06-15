@@ -1,0 +1,442 @@
+/* タブレット */
+@media screen and (max-width:959px){
+    body {
+        header {
+            padding: 0 50px;
+
+            .header-inner {
+                justify-content: space-between;
+
+                .header-center, .header-right {
+                    display: none;
+                }
+                .humbergur-menu-icon {
+                    width: 25px;
+                    height: 2px;
+                    background-color: #333;
+                    position: relative;
+                    display: block;
+                    cursor: pointer;
+
+                    &::before {
+                        content: "";
+                        width: inherit;
+                        height: 2px;
+                        background-color: #333;
+                        position: absolute;
+                        top: -8px;
+                        box-sizing: inherit;
+                    }
+                    &::after {
+                        content: "";
+                        width: inherit;
+                        height: 2px;
+                        background-color: #333;
+                        position: absolute;
+                        top: 8px;
+                        box-sizing: inherit;
+                    }
+                }
+            }
+        }
+        /* ハンバーガー */
+        .humbergur-menu {
+            .menu {
+                .icon-wrap {
+                    right: 45px;
+                }
+            }
+        }
+        main {
+            padding-top: 80px;
+
+            /* メイン画像 */
+            .main-img-container {
+                padding-left: 10px;
+                .main-img-left {
+                    width: 40%;
+                    margin: 0;
+
+                    h2 {
+                        font-size: 26px;
+                    }
+                    p {
+                        width: 100%;
+                    }
+                }
+                .main-img-right {
+                    left: 2%;
+                }
+            }
+
+            /* 特徴 */
+            .feature-container {
+                .features {
+                    &:nth-of-type(2) {
+                        .feature-text {
+                            margin: 0;
+                            width: 50%;
+                        }
+                    }
+                    .feature {
+                        .feature-img {
+                            width: 100%;
+                            max-width: 400px;
+                        }
+                    }
+                }
+            }
+
+            /* プライス */
+            .price-container {
+                table {
+                    tbody {
+                        tr {
+                            td {
+                                width: 40%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* よくある質問 */
+            .faq-container {
+                .faqs {
+                    .faq {
+                        .answer {
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+
+            /* ブログ */
+            .blog-container {
+                .blogs {
+                    .blog {
+                        h2 {
+                            font-size: 16px;
+                            margin: 15px;
+                            line-height: 22px;
+                            padding: 0;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            /* 制作実績 */
+            .works-container {
+                .works {
+                    margin-bottom: 50px;
+                    .work {
+                        .work-text {
+                            padding: 0;
+
+                            h2 {
+                                line-height: 21px;
+                                margin-bottom: 18px;
+                            }
+                            ul {
+                                line-height: 19px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* お問い合わせ */
+            .contact-container {
+                form {
+                    div {
+                        p {
+                            margin-bottom: 20px;
+                        }
+                        input[type] {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* スマホ */
+@media screen and (max-width:559px){
+    body {
+        header {
+            padding: 0 5px;
+
+            .header-inner {
+                .humbergur-menu {
+                    .menu {
+                        ul {
+                            li {
+                                a {
+                                    font-size: 28px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* ハンバーガー */
+        .humbergur-menu {
+            .menu {
+                .icon-wrap {
+                    right: 0;
+                }
+            }
+        }
+        main {
+            /* メイン */
+            .main-img-container {
+                flex-direction: column-reverse;
+                padding-left: 0;
+
+                .main-img-left {
+                    width: 100%;
+                    padding: 0 25px;
+                    margin-top: 20px;
+
+                    h2 {
+                        margin-bottom: 20px;
+                    }
+                    .btn-wrap {
+                        text-align: center;
+
+                        .common-btn {
+                            width: 70%;
+                            padding: 15px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .main-img-right {
+                    width: 70%;
+
+                    img {
+                        &:last-child {
+                            width: 100%;
+                            left: 30%
+                        }
+                    }
+                }
+            }
+
+            /* トップに戻るボタン */
+            .btn-top {
+                width: 50px;
+                height: 50px;
+
+                span {
+                    font-size: 13px;
+                }
+            }
+
+            /* 特徴 */
+            .feature-container {
+                .features {
+                    h2 {
+                        margin-bottom: 30px;
+                    }
+                    .feature {
+                        display: block;
+
+                        .feature-img {
+                            width: 70%;
+                            margin: 0 auto 30px;
+                        }
+                        .feature-text {
+                            width: 100%;
+                            text-align: center;
+
+                            h3 {
+                                margin-bottom: 30px;
+                            }
+                        }
+                        &:nth-child(even) {
+                            .feature-text {
+                                margin: 0 0 30px;
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            /* FAQ */
+            .faq-container {
+                .faqs {
+                    .faq {
+                        .line1, .line2 {
+                            padding-left: 5px;
+                        }
+                        .answer.line1 {
+                            line-height: 30px;
+                            padding: 28px 5px;
+                        }
+                    }
+                }
+            }
+
+            /* ブログ */
+            .blog-container {
+                .blogs {
+                    display: block;
+
+                    .blog {
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* iphone6,7,8 */
+@media screen and (max-width:375px){
+    body {
+        header {
+            .header-inner {
+                .humbergur-menu {
+                    .menu {
+                        ul {
+                            li {
+                                a {
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        main {
+            /* メイン画像* */
+            .main-img-container {
+                .main-img-left {
+                    padding: 0 10px;
+
+                    h2 {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            /* 特徴 */
+            .feature-container {
+                h2 {
+                    font-size: 28px;
+                }
+                .features {
+                    .feature {
+                        .feature-img {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            /* 価格 */
+            .price-container {
+                table {
+                    width: 90%;
+                }
+            }
+            /* お問い合わせ */
+            .contact-container {
+                form {
+                    width: 90%;
+                }
+                .submit-btn {
+                    width: 70%;
+                    padding: 15px;
+                    font-size: 16px;
+
+                }
+            }
+        }
+    }
+}
+
+/* 最小 */
+@media screen and (max-width:320px){
+    body {
+        header {
+            .header-inner {
+                justify-content: center;
+
+                .humbergur-menu {
+                    .menu {
+                        .icon-wrap {
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        /* ハンバーガー */
+        .humbergur-menu {
+            .menu {
+                .icon-wrap {
+                    right: 0%;
+                }
+            }
+        }
+        main {
+
+            /* メイン画像 */
+            .main-img-container {
+                .main-img-left {
+                    h2 {
+                        min-width: 100%;
+                    }
+                }
+            }
+            /* 特徴 */
+            .feature-container {
+                h2 {
+                    line-height: 1.5;
+                }
+            }
+            /* 価格 */
+            .price-container {
+                padding-left: 15px;
+                padding-right: 15px;
+
+                table {
+                    width: 100%;
+
+                    tbody {
+                        tr {
+                            td {
+                                width: 50%;
+                                padding: 0 10px;
+
+                                &:nth-child(even) {
+                                    text-align: center;
+                                    padding-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* よくある質問 */
+            .faq-container {
+                width: 90%;
+            }
+        }
+    }
+}
+
