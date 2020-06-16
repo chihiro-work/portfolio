@@ -1,34 +1,34 @@
-/* 文字コード */
+//文字コード
 @charset "utf-8";
 
-/* 変数などの定義 */
+//変数などの定義
 @import "setting/_config";
 
-/* サイト全体設定 */
+//サイト全体設定
 @import "base/_base";
 
-/* ヘッダー */
+//ヘッダー
 @import "module/_header";
 
-/* 共通の構造 */
+//共通の構造
 @import "mixin/_construction.scss";
 
-/* ボタン */
+//ボタン
 @import "mixin/_btn.scss";
 
-/* ラベル */
+//ラベル
 @import "mixin/_label.scss";
 
-/* トップページのコンテンツ */
+//トップページのコンテンツ
 @import "page/_top-page.scss";
 
-/* フッター */
+//フッター
 @import "module/_footer.scss";
 
-/* ハンバーガーメニュー */
+//ハンバーガーメニュー
 @import "module/_humbergur";
 
-/* レスポンシブ */
+//レスポンシブ
 @import "mixin/_responsive.scss";
 
 
