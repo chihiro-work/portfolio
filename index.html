@@ -318,25 +318,28 @@
                     <p>
                         <label for="name">お名前</label>
                         <span class="required-label">必須</span>
+                        <span class="erroy-msg"></span>
                     </p>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" class="required">
                 </div>
                 <div>
                     <p>
                         <label for="mail">メールアドレス</label>
                         <span class="required-label">必須</span>
+                        <span class="erroy-msg"></span>
                     </p>
-                    <input type="email" name="mail" id="mail">
+                    <input type="email" name="mail" id="mail" class="required _js_mail-validation">
                 </div>
                 <div>
                     <p>
                         <label for="contact-content">お問い合わせ内容</label>
                         <span class="required-label">必須</span>
+                        <span class="erroy-msg"></span>
                     </p>
-                    <textarea name="contact" id="contact-content"></textarea>
+                    <textarea name="contact" id="contact-content" class="required"></textarea>
                 </div>
                 <div class="btn-wrap">
-                    <input type="submit" value="送信する" class="common-btn submit-btn">
+                    <button type="button" class="common-btn submit-btn" id="_js_submit">送信する</button>
                 </div>
             </form>
         </section>

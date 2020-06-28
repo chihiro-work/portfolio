@@ -16,13 +16,13 @@ $(function () {
           $('body, html').animate({scrollTop: $target}, 800);
           return false;
     })
-    
+
     /*------------------------------------------
     トップに戻るボタン
     ------------------------------------------*/
     $(function () {
         const $btn_top = $('.btn-top');
-    
+
         //スクロール量によってトップに戻るボタンの表示・非表示を分ける
         $(window).on('scroll', function(){
             if($(this).scrollTop() > 100) {
@@ -31,7 +31,7 @@ $(function () {
                 $btn_top.fadeOut()
             }
         })
-    
+
         //クリックすると1番上に戻る
         $btn_top.on('click', function () {
             $('body, html').animate({scrollTop: 0}, 500);
@@ -52,7 +52,7 @@ $(function () {
         }
         return false;
     })
-  
+
     /*------------------------------------------
     ハンバーガーメニュー
     ------------------------------------------*/
@@ -104,4 +104,59 @@ $(function () {
             }
         }
     });
+
+    /*------------------------------------------
+    フォームのバリデーション
+    ------------------------------------------*/
+    /* 各項目の必須確認 */
+    const err_msg_obj = {
+        err_required: '入力してください',
+        err_mail: 'メール形式で入力してください'
+    };
+    let $required = $('.required');
+    $required.on('blur', function () {
+        if ($(this).val() == '') {
+            $(this).siblings('p').children('.erroy-msg').text(err_msg_obj['err_required']);
+        } else {
+            $(this).siblings('p').children('.erroy-msg').text('');
+        }   
+    })
+
+    /* メール形式チェック */
+    let $mail = $('._js_mail-validation');
+    const mail_expr = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    $mail.on('blur', function () {
+        if(!$(this).val() == '' && !$mail.val().match(mail_expr)) {
+            $mail.siblings('p').children('.erroy-msg').text(err_msg_obj['err_mail']);
+        } else if(!$(this).val() == '' && $mail.val().match(mail_expr)) {
+            $mail.siblings('p').children('.erroy-msg').text('');
+        }
+    })
+
+
+    /* 送信時の必須確認 */
+    $('#_js_submit').on('click', function () {
+        let flag = true;
+
+        // 必須項目入力チェック
+        $required.each(function (index, element) {
+            if (!$(element).val()) {
+                flag = false;
+                $(element).siblings('p').children('.erroy-msg').text(err_msg_obj['err_required']);
+            } else if(!$mail.val().match(mail_expr)) {
+                flag = false;
+            }
+        })
+        if (flag) {
+            // 送信の確認
+            if (!confirm('送信しますか？')) {
+                return false;
+            } else {
+                $('form').off().submit();
+                $('form').submit();
+            }
+        } else {
+            return false;
+        }
+    })
 })

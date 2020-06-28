@@ -511,28 +511,11 @@ main .contact-container form div textarea {
   height: 179px;
 }
 
-main .contact-container .after-msg {
-  color: #333;
-  font-size: 32px;
-  position: relative;
-}
-
-main .contact-container .after-msg .end-message {
-  display: none;
-  font-size: 24px;
-  position: absolute;
-  top: -227px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-main .contact-container .after-msg .false-message {
-  display: none;
-  font-size: 24px;
-  position: absolute;
-  top: -227px;
-  left: 50%;
-  transform: translateX(-50%);
+main .contact-container form .erroy-msg {
+  color: #f81313;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 26px;
 }
 
 /* フッター */
